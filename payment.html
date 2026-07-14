@@ -1,0 +1,193 @@
+<!doctype html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="Second Spring secure booking details and payment page.">
+    <title>Secure Booking & Payment | Second Spring</title>
+    <link rel="stylesheet" href="styles.css?v=secure-booking-20260712">
+    <script src="https://js.stripe.com/v3/"></script>
+  </head>
+  <body class="secure-booking-page">
+    <header class="site-header">
+      <a class="brand" href="index.html" aria-label="Second Spring 首页">
+        <img class="brand-flower" src="assets/images/second-spring-lotus-logo.png" alt="" aria-hidden="true">
+        <span class="brand-copy">
+          <strong>Second Spring</strong>
+          <b>全球盛开人生规划平台</b>
+          <small>规划理想人生 · 体验品质生活</small>
+        </span>
+      </a>
+      <nav class="primary-nav" aria-label="Primary navigation">
+        <a href="index.html"><span>Home</span><small>首页</small></a>
+        <a href="curated-experiences.html"><span>Retreats</span><small>甄选体验</small></a>
+        <a href="global-living.html"><span>Wellness Living</span><small>全球旅居康养</small></a>
+        <a href="policies.html"><span>Policies</span><small>政策与条款</small></a>
+        <a href="our-beginning.html"><span>About</span><small>关于我们</small></a>
+        <a href="contact.html"><span>Contact</span><small>联系我们</small></a>
+      </nav>
+    </header>
+
+    <main class="secure-booking-shell">
+      <section class="secure-booking-hero">
+        <p class="eyebrow">Secure Booking</p>
+        <h1>报名资料与安全付款</h1>
+        <p>请填写旅行报名资料，然后选择付款方式。信用卡由 Stripe 安全处理；Zelle 和 PayPal 只显示收款邮箱，不会收集您的账户信息。护照和紧急联系人信息会先在您的浏览器里加密，再发送给我们。</p>
+      </section>
+
+      <form class="secure-booking-form" id="secure-booking-form">
+        <section class="booking-card" aria-labelledby="trip-heading">
+          <div class="booking-card-heading">
+            <span>1</span>
+            <div>
+              <p class="eyebrow">Trip</p>
+              <h2 id="trip-heading">行程与联系方式</h2>
+            </div>
+          </div>
+
+          <div class="booking-grid">
+            <label>
+              <span>Trip / Departure</span>
+              <select name="trip_code" id="trip-code" required>
+                <option value="">Choose a trip</option>
+                <option value="aug-sep-2026-retreat">2026 8-9月体验旅</option>
+                <option value="october-2026-retreat">10月体验旅</option>
+              </select>
+            </label>
+            <label>
+              <span>Email</span>
+              <input name="email" type="email" autocomplete="email" required>
+            </label>
+            <label>
+              <span>Phone</span>
+              <input name="phone" type="tel" autocomplete="tel" required>
+            </label>
+          </div>
+        </section>
+
+        <section class="booking-card" aria-labelledby="passport-heading">
+          <div class="booking-card-heading">
+            <span>2</span>
+            <div>
+              <p class="eyebrow">Encrypted before sending</p>
+              <h2 id="passport-heading">旅行证件与紧急联系人</h2>
+            </div>
+          </div>
+
+          <div class="encryption-status is-pending" id="encryption-status" aria-live="polite">
+            Encryption is preparing in your browser.
+          </div>
+
+          <div class="booking-grid">
+            <label>
+              <span>Given names exactly as in passport</span>
+              <input name="given_names" type="text" autocomplete="given-name" required>
+            </label>
+            <label>
+              <span>Surname exactly as in passport</span>
+              <input name="surname" type="text" autocomplete="family-name" required>
+            </label>
+            <label>
+              <span>Date of birth</span>
+              <input name="date_of_birth" type="date" required>
+            </label>
+            <label>
+              <span>Nationality</span>
+              <input name="nationality" type="text" autocomplete="country-name" required>
+            </label>
+            <label>
+              <span>Passport number</span>
+              <input name="passport_number" type="text" autocomplete="off" required>
+            </label>
+            <label>
+              <span>Passport issue date</span>
+              <input name="passport_issue_date" type="date" required>
+            </label>
+            <label>
+              <span>Passport expiry date</span>
+              <input name="passport_expiry_date" type="date" required>
+            </label>
+            <label>
+              <span>Emergency contact name</span>
+              <input name="emergency_name" type="text" autocomplete="off" required>
+            </label>
+            <label>
+              <span>Emergency contact phone</span>
+              <input name="emergency_phone" type="tel" autocomplete="off" required>
+            </label>
+            <label>
+              <span>Emergency contact relationship</span>
+              <input name="emergency_relationship" type="text" autocomplete="off" required>
+            </label>
+          </div>
+        </section>
+
+        <section class="booking-card" aria-labelledby="payment-heading">
+          <div class="booking-card-heading">
+            <span>3</span>
+            <div>
+              <p class="eyebrow">Payment</p>
+              <h2 id="payment-heading">选择付款方式</h2>
+            </div>
+          </div>
+
+          <div class="payment-choice-grid" role="radiogroup" aria-label="Payment method">
+            <label class="payment-choice">
+              <input type="radio" name="payment_method" value="zelle" checked>
+              <strong>Zelle</strong>
+              <span>Zelle To: wangyanbo@gmail.com</span>
+              <b>Recommended</b>
+            </label>
+            <label class="payment-choice">
+              <input type="radio" name="payment_method" value="card">
+              <strong>Pay by card</strong>
+              <span>Stripe securely collects card details. We never see card numbers.</span>
+            </label>
+            <label class="payment-choice">
+              <input type="radio" name="payment_method" value="paypal">
+              <strong>PayPal</strong>
+              <span>PayPal to: wangyanbo@gmail.com</span>
+            </label>
+          </div>
+
+          <div class="amount-panel">
+            <span>Amount due today</span>
+            <strong id="amount-display">US$ 2,180.00</strong>
+            <small>The final payment amount is set on the secure Worker, not by this browser.</small>
+          </div>
+
+          <div class="turnstile-box">
+            <div id="booking-turnstile"></div>
+            <div id="payment-turnstile"></div>
+            <p>Bot protection helps keep the form usable for real travelers.</p>
+          </div>
+
+          <div id="stripe-payment-area" class="stripe-payment-area" hidden>
+            <h3>Secure Stripe payment</h3>
+            <div id="payment-element"></div>
+            <button class="button primary wide" type="button" id="confirm-payment-button">Pay securely with Stripe</button>
+          </div>
+
+          <div id="wire-instructions" class="wire-instructions" hidden>
+            <h3 id="manual-payment-title">Payment instructions</h3>
+            <p><strong>Booking reference:</strong> <span id="wire-booking-reference">Generated after submit</span></p>
+            <div id="manual-payment-details"></div>
+            <p>Please include the booking reference in your note or memo. We will mark the booking paid after the payment is confirmed.</p>
+          </div>
+        </section>
+
+        <section class="booking-card booking-submit-card">
+          <label class="booking-consent">
+            <input type="checkbox" name="consent" required>
+            <span>I understand my sensitive travel details are encrypted in this browser before they leave my device. I also understand card payment details are handled only by Stripe, and Zelle/PayPal payments are confirmed manually.</span>
+          </label>
+          <button class="button primary secure-submit-button" type="submit">Submit booking and continue</button>
+          <p class="booking-message" id="booking-message" role="status"></p>
+        </section>
+      </form>
+    </main>
+
+    <script type="module" src="payment.js?v=secure-booking-20260712"></script>
+    <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit&onload=onTurnstileReady" defer></script>
+  </body>
+</html>
