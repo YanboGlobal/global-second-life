@@ -13,19 +13,47 @@ const copy = {
   en: {
     nav: { about: "About", activities: "Featured Activities", packages: "Packages", care: "Care Services", contact: "Contact" },
     hero: {
-      eyebrow: "Cross-border retirement and wellness living",
-      title: "Global Second Life",
-      body: "A trusted bridge for overseas Chinese and global families designing a healthier, freer, and more meaningful second stage of life.",
-      primary: "Explore Packages",
-      secondary: "Contact Us",
-      stat1: "sample destinations",
-      stat2: "bilingual experience",
-      stat3: "platform ready"
+      eyebrow: "A global second life lifestyle platform",
+      title: "Redesign the second half of life",
+      body: "Second Spring helps global Chinese families explore a freer, healthier, more companioned, and more secure second life.",
+      primary: "Explore Living Options",
+      secondary: "Talk to Us",
+      keywords: ["Global Living", "Wellness & Longevity", "Community & Culture", "Premium Care"]
+    },
+    pathway: {
+      eyebrow: "Second life pathways",
+      title: "Four ways to design a freer, healthier, more connected second life.",
+      items: [
+        {
+          title: "Where to live",
+          subtitle: "Global Living",
+          description: "Explore global destinations for retirement, long-stay living, wellness travel, and slower seasonal life.",
+          href: "#packages"
+        },
+        {
+          title: "How to feel healthier and younger",
+          subtitle: "Wellness & Longevity",
+          description: "Connect with Chinese medicine, hot springs, anti-aging, nutrition, sleep, recovery, and longevity lifestyles.",
+          href: "#activities"
+        },
+        {
+          title: "How to find joy and companionship",
+          subtitle: "Community & Culture",
+          description: "Build a warmer second life through tea culture, heritage craft, travel circles, cultural experiences, and like-minded companions.",
+          href: "#activities"
+        },
+        {
+          title: "When real care is needed",
+          subtitle: "Premium Care",
+          description: "Access premium senior living, medical support, rehabilitation nursing, long-term care, and cross-border family support.",
+          href: "#care"
+        }
+      ]
     },
     about: {
-      eyebrow: "Welcome to Global Second Life",
+      eyebrow: "Welcome to Second Spring",
       title: "Retirement is the beginning of your Second Life.",
-      p1: "Global Second Life is a cross-border retirement and lifestyle platform designed for overseas Chinese and global families who want a healthier, freer, and more meaningful second stage of life.",
+      p1: "Second Spring is a cross-border retirement and lifestyle platform designed for overseas Chinese and global families who want a healthier, freer, and more meaningful second stage of life.",
       p2: "We help families explore life after midlife through retirement planning, wellness living, global mobility, healthcare resources, cultural connection, and purpose-driven community.",
       p3: "",
       p4: ""
@@ -122,22 +150,50 @@ const copy = {
   zh: {
     nav: { about: "关于我们", activities: "特色活动", packages: "旅居套餐", care: "照护服务", contact: "联系我们" },
     hero: {
-      eyebrow: "跨境退休与康养生活平台",
-      title: "第二人生\n全球旅居康养平台",
-      body: "为海外华人和全球家庭打造可信赖的跨境退休与康养生活平台，\n规划更年轻，更健康，更自由，更幸福的人生第二阶段",
-      primary: "查看套餐",
+      eyebrow: "全球华人盛开人生生活方式平台",
+      title: "重新设计人生后半场",
+      body: "Second Spring 帮助全球华人探索更自由、更健康、更有陪伴、更安心的盛开人生。",
+      primary: "探索旅居生活",
       secondary: "联系我们",
-      stat1: "示例目的地",
-      stat2: "中英文体验",
-      stat3: "AI 平台就绪"
+      keywords: ["全球旅居", "康养长寿", "社群文化", "高端照护"]
+    },
+    pathway: {
+      eyebrow: "四大主入口",
+      title: "从生活、健康、快乐到照护，重新规划人生后半场。",
+      items: [
+        {
+          title: "去哪里生活",
+          subtitle: "全球旅居 / Global Living",
+          description: "探索适合退休、长期旅居、康养慢生活的全球目的地。",
+          href: "#packages"
+        },
+        {
+          title: "如何更健康年轻",
+          subtitle: "康养长寿 / Wellness & Longevity",
+          description: "连接中医、温泉、抗衰、营养、睡眠、康复与长寿生活方式。",
+          href: "#activities"
+        },
+        {
+          title: "如何获得陪伴与快乐",
+          subtitle: "社群文化 / Community & Culture",
+          description: "通过茶文化、非遗、旅行社群、文化体验和同频伙伴，建立有温度的盛开人生。",
+          href: "#activities"
+        },
+        {
+          title: "当真正需要照护时",
+          subtitle: "高端养老与医疗 / Premium Care",
+          description: "提供高端养老、医疗、康复护理、长期照护与跨国家庭支持。",
+          href: "#care"
+        }
+      ]
     },
     about: {
-      eyebrow: "欢迎来到 Global Second Life",
+      eyebrow: "欢迎来到 Second Spring",
       title: "真正的自由，不是停止前行，\n而是终于可以按照自己真正想要的方式去生活。",
-      p1: "Global Second Life 是面向海外华人与全球家庭的跨境退休与生活方式平台，致力于帮助人们开启更健康、更自由、更有意义的人生第二阶段。",
+      p1: "Second Spring 是面向海外华人与全球家庭的跨境退休与生活方式平台，致力于帮助人们开启更健康、更自由、更有意义的人生第二阶段。",
       p2: "我们融合退休规划、康养旅居、全球流动、医疗资源、文化连接与高质量社群，帮助家庭重新设计中年之后的人生方式与生活状态。",
-      p3: "无论是寻找理想的退休旅居地、探索健康长寿生活、链接全球资源，还是实现财富、家庭与精神层面的平衡，Global Second Life 都希望成为连接世界与第二人生的桥梁。",
-      p4: "退休不是人生的终点，\n而是第二人生的开始。"
+      p3: "无论是寻找理想的退休旅居地、探索健康长寿生活、链接全球资源，还是实现财富、家庭与精神层面的平衡，Second Spring 都希望成为连接世界与盛开人生的桥梁。",
+      p4: "退休不是人生的终点，\n而是盛开人生的开始。"
     },
     dreams: [
       "设计全球高品质季节性旅居与康养套餐",
@@ -156,7 +212,7 @@ const copy = {
         ["私人策划全球退休与生活方式", "提供跨境退休、全球旅居、迁居选择与人生第二阶段生活方式的私人定制指导，帮助人们开启更自由、更健康、更有意义的人生新篇章。"],
         ["康养与退休目的地", "精选城市、社区、度假村与康养中心，关注气候、医疗、文化与生活质量。"],
         ["健康与长寿资源", "连接全球优质康养项目、中医调理、康复修复、抗衰年轻化与健康管理资源，打造身心焕新、活力长寿的人生体验。"],
-        ["社区与社交连接", "建立互动交流的全球华人社群，让人们结交志同道合的朋友、结伴旅居、分享人生经验，共同创造充实而有归属感的第二人生。"],
+        ["社区与社交连接", "建立互动交流的全球华人社群，让人们结交志同道合的朋友、结伴旅居、分享人生经验，共同创造充实而有归属感的盛开人生。"],
         ["退休与财务策略", "提供退休规划、税务优化、全球资产配置与财富传承等相关教育与咨询，帮助人们更安心、更智慧地面对人生第二阶段。"],
         ["AI 陪伴与数字平台", "以技术和 AI 工具帮助用户导航退休决策、发现机会并保持全球连接。"]
       ]
@@ -272,7 +328,7 @@ function applyTranslations() {
   document.documentElement.lang = state.lang === "zh" ? "zh-CN" : "en";
   document.querySelectorAll("[data-i18n]").forEach((node) => {
     const text = t(node.dataset.i18n);
-    if (node.dataset.i18n === "hero.title" && state.lang === "zh") {
+    if (node.dataset.i18n === "hero.title" && state.lang === "zh" && text.includes("\n")) {
       const [primary, secondary] = text.split("\n");
       node.innerHTML = `<span class="hero-title-main">${primary}</span><span class="hero-title-sub">${secondary}</span>`;
     } else {
@@ -281,6 +337,21 @@ function applyTranslations() {
     node.hidden = text === "";
   });
   document.querySelector("[data-lang-toggle]").textContent = state.lang === "en" ? "中文" : "English";
+}
+
+function renderHeroKeywords() {
+  byId("hero-keywords").innerHTML = copy[state.lang].hero.keywords.map((keyword) => `<span>${keyword}</span>`).join("");
+}
+
+function renderPathways() {
+  byId("pathway-grid").innerHTML = copy[state.lang].pathway.items.map((item, index) => `
+    <a class="pathway-card pathway-card-${index + 1}" href="${item.href}">
+      <span class="pathway-number">0${index + 1}</span>
+      <strong>${item.title}</strong>
+      <small>${item.subtitle}</small>
+      <p>${item.description}</p>
+    </a>
+  `).join("");
 }
 
 function renderDreams() {
@@ -475,6 +546,8 @@ function bindEvents() {
 
 function renderAll() {
   applyTranslations();
+  renderHeroKeywords();
+  renderPathways();
   renderDreams();
   renderServices();
   renderFilters();
