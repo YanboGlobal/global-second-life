@@ -547,6 +547,21 @@
 .home-poster-hotspot.card-care { top: 39.1%; left: 48.8%; width: 9.5%; height: 13.3%; }
 .home-poster-hotspot.english { top: 4.6%; left: 85.8%; width: 9.7%; height: 4.8%; }
 
+.home-feature-posters {
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+  background: #fffaf3;
+}
+
+.home-feature-posters img {
+  display: block;
+  width: 100vw;
+  max-width: none;
+  height: auto;
+  margin: 0;
+}
+
 .home-english-nav,
 .home-english-hotspot {
   position: absolute;
@@ -5303,6 +5318,28 @@ input {
   flex-wrap: wrap;
   gap: 12px;
   margin-top: 24px;
+}
+
+.october-pdf-body {
+  margin: 0;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+.october-pdf-page {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: #fff;
+}
+
+.october-pdf-page > img {
+  display: block;
+  width: 100%;
+  max-width: none;
+  height: auto;
+  margin: 0;
+  border: 0;
 }
 
 .curated-new-poster-body {
